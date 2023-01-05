@@ -4,23 +4,23 @@ import "./Greenhouse.css";
 
 import LightSwitch from "./LightSwitch";
 import ClimateStats from "./ClimateStats";
-import { useContext } from "react";
+// import { useContext } from "react";
 import { useTheme } from "../../context/ThemeContext";
 
 function Greenhouse() {
-  const { themeName } = useTheme();
+	const { themeName } = useTheme();
 
-  return (
-    <section>
-      <img
-        className="greenhouse-img"
-        src={themeName === "day" ? dayImage : nightImage}
-        alt="greenhouse"
-      />
-      <LightSwitch />
-      <ClimateStats />
-    </section>
-  );
+	return (
+		<section>
+			<img
+				className="greenhouse-img"
+				src={themeName === "day" ? dayImage : nightImage}
+				alt="greenhouse"
+			/>
+			<LightSwitch />
+			<ClimateStats />
+		</section>
+	);
 }
 
 export default Greenhouse;
